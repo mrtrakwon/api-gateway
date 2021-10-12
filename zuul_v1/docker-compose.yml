@@ -1,0 +1,22 @@
+version: '2.1'
+
+services:
+  target1:
+    build: ../target/route-target1
+    mem_limit: 350m
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
+  target2:
+    build: ../target/route-target2
+    mem_limit: 350m
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+
+  zuul_v1:
+    build: ../zuul_v1
+    mem_limit: 350m
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker

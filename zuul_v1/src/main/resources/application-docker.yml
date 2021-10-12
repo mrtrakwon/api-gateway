@@ -1,0 +1,17 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    com.mrtrakwon.zuulv1: debug
+
+zuul:
+  routes:
+    target1:
+      path: /target1/**
+      url: http://target1:8080
+      stripPrefix: true
+    target2:
+      path: /target2/**
+      url: http://target2:8080
+      stripPrefix: true
