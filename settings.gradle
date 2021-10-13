@@ -3,4 +3,6 @@ rootProject.name = 'api-gateway'
 include 'target:route-target1'
 include 'target:route-target2'
 include 'zuul_v1'
+include 'target:auth'
+include 'jwt'
 
